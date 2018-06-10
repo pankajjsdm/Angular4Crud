@@ -1,0 +1,23 @@
+<li *ngFor="let emp of employeeList">
+  <div style="color:Blue;scroll-behavior: auto">
+     Employee Id:  {{emp.id}} <br>
+     Employee Name:  {{emp.name}} <br>
+     Employee Salary:  {{emp.salary}} <br>
+  </div>
+  </li>
+  <br>
+  <div style="background-color: gray;height: 20%; width: 30%;text-align: center;">
+      <div><span>Employee ID:</span>  <input type="text" #empid  placeholder="Please enter Employee ID" > </div><br>
+      <div><span>Employee Name: </span> <input type="text" #empname placeholder="Please enter Employee Name" > </div><br>
+      <div><span>Employee Salary:</span>  <input type="text" #empsalary placeholder="Please enter Employee Salary" > </div>
+  </div> 
+  <br>
+  <br>
+  {{message}}  
+  <input type="button" id="btnInsert" (click)="InsertEmployee(empid.value,empname.value,empsalary.value);" value="Insert">
+  <input type="button" id="btnUpdate" (click)="UpdateEmployee(empid.value,empname.value,empsalary.value)" value="Update">
+  <input type="button" id="btnDelete" (click)="DeleteEmployee(empid.value)" value="Delete">
+  
+  
+  
+  
